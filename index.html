@@ -5,281 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="wjPeGDYi_Hu94YIgylEd9CgH9pK57N3UUDp1_OFulXM" />
   <title>Shri Harbansh Singh Ji - Loktantra Rakshak Senani</title>
+  <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(120deg, #fffef8 0%, #fdf6e3 60%, #ffd700 100%);
-      color: #7d6332;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      position: relative;
-      overflow-x: hidden;
-    }
-    .circle-bg {
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      z-index: 0;
-      left: 0;
-      top: 0;
-      pointer-events: none;
-      opacity: 0.25;
-    }
-    .circle {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(60px);
-      opacity: 0.15;
-      animation: circleFloat 18s linear infinite alternate;
-    }
-    .circle1 { background: #ffe29a; width: 300px; height: 300px; top: 13%; left: 8%; animation-delay: 0s;}
-    .circle2 { background: #ffd700; width: 180px; height: 180px; top: 67%; left: 82%; animation-delay: 4s;}
-    .circle3 { background: #fdf6e3; width: 120px; height: 120px; top: 75%; left: 17%; animation-delay: 8s;}
-    @keyframes circleFloat {
-      0%,100% {transform: translateY(0);}
-      50% {transform: translateY(-38px);}
-    }
-    header {
-      background: linear-gradient(95deg, #fffbe5 0%, #ffe29a 80%);
-      color: #7d6332;
-      padding: 70px 20px 32px 20px;
-      text-align: center;
-      animation: fadeIn 2s cubic-bezier(.52,.01,.48,1);
-      border-radius: 0 0 40px 40px;
-      box-shadow: 0 8px 32px rgba(255,215,0,0.06);
-      position: relative;
-      z-index: 1;
-    }
-    .profile-img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 8px 32px rgba(255,215,0,0.10);
-      border: 4px solid #fffef8;
-      margin-bottom: 18px;
-      animation: popIn 1.2s cubic-bezier(.54,.14,.54,.93);
-      background: #fff;
-    }
-    @keyframes popIn {
-      0% {transform: scale(0); opacity:0;}
-      80% {transform: scale(1.08);}
-      100% {transform: scale(1); opacity:1;}
-    }
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin: 0;
-      letter-spacing: 1.5px;
-      text-shadow: 0 2px 12px #fff3;
-      background: linear-gradient(90deg, #d4af37, #ffd700, #ffe29a, #fffde4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    header p {
-      font-size: 1rem;
-      font-style: italic;
-      margin-top: 8px;
-      letter-spacing: 1px;
-      color: #7d6332;
-    }
-    .badge {
-      display: inline-block;
-      background: linear-gradient(90deg, #ffd700, #ffe29a);
-      color: #7d6332;
-      font-weight: bold;
-      padding: 6px 18px;
-      border-radius: 25px;
-      font-size: 1rem;
-      margin-top: 18px;
-      box-shadow: 0 2px 8px #ffd70040;
-      letter-spacing: 1px;
-    }
-    .section {
-      position: relative;
-      z-index: 1;
-      padding: 44px 20px;
-      max-width: 960px;
-      margin: 48px auto 0 auto;
-      background: rgba(255,253,236,0.97);
-      border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(255,215,0,0.04);
-      animation: slideUp 1.3s cubic-bezier(.59,.01,.69,.97);
-      border: 1.2px solid #ffd700;
-      overflow: hidden;
-      backdrop-filter: blur(2px);
-    }
-    .section h2 {
-      font-size: 1.45rem;
-      border-bottom: 2px solid #ffd700;
-      padding-bottom: 10px;
-      margin-bottom: 22px;
-      letter-spacing: 1px;
-      font-weight: 700;
-      color: #ad8300;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-shadow: 0 2px 8px #ffd70033;
-    }
-    .section h2 .fa {
-      color: #d4af37;
-      font-size: 1.25rem;
-    }
-    .section h2 .fa-youtube {color: #e53935;}
-    .section h2 .fa-image {color: #ffd700;}
-    .timeline {
-      position: relative;
-      padding-left: 30px;
-    }
-    .timeline:before {
-      content: '';
-      position: absolute;
-      left: 10px; top: 0;
-      width: 5px; height: 100%;
-      background: linear-gradient(to bottom, #ffd700 0%, #ffe29a 100%);
-      border-radius: 3px;
-      opacity: 0.7;
-    }
-    .timeline-entry {
-      position: relative;
-      margin-bottom: 30px;
-      border-left: none;
-      padding-left: 0;
-      background: linear-gradient(90deg,#fffef8 70%,#ffe29a 100%);
-      border-radius: 10px;
-      padding: 15px 18px;
-      box-shadow: 0 2px 8px rgba(255,215,0,0.06);
-      transition: box-shadow 0.2s, background 0.2s;
-      animation: timelineFadeIn 1.2s cubic-bezier(.59,.01,.69,.97);
-    }
-    .timeline-entry:before {
-      content: '';
-      position: absolute;
-      left: -28px;
-      top: 20px;
-      width: 14px;
-      height: 14px;
-      background: linear-gradient(135deg, #ffd700, #ffe29a);
-      border-radius: 50%;
-      border: 2px solid #fffbe5;
-      box-shadow: 0 2px 8px #ffd70020;
-    }
-    @keyframes timelineFadeIn {
-      from { opacity: 0; transform: translateY(40px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-    .timeline-entry:hover {
-      box-shadow: 0 6px 32px #ffd70018, 0 0 0 2px #ffe29a44;
-      background: linear-gradient(90deg,#ffe29a 70%, #fffef8 100%);
-      transition: box-shadow 0.2s, background 0.2s;
-    }
-    .timeline-entry strong {
-      color: #d4af37;
-      font-size: 0.95rem;
-      margin-right: 10px;
-    }
-    .timeline-entry em {
-      color: #ad8300;
-      font-size: 0.93rem;
-      display: block;
-      margin-top: 6px;
-      font-style: italic;
-    }
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px #ffd70030;
-      margin-bottom: 8px;
-      background: #fff;
-      animation: fadeIn 1.7s cubic-bezier(.52,.01,.48,1);
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 30px;
-      animation: fadeIn 1.7s cubic-bezier(.52,.01,.48,1);
-    }
-    .gallery img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 8px 32px rgba(255,215,0,0.11);
-      transition: transform 0.2s, box-shadow 0.2s;
-      background: #fff;
-      border: 2px solid #ffe29a;
-    }
-    .gallery img:hover {
-      transform: scale(1.06) rotate(-2deg);
-      box-shadow: 0 8px 40px #ffd70044,0 0 0 2.5px #d4af37;
-      border: 2.5px solid #ffd700;
-      z-index: 2;
-    }
-    .hindi {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.09rem;
-      margin-top: 8px;
-      background: linear-gradient(90deg,#ffd70040,#fffef8 90%);
-      padding: 7px 12px;
-      border-radius: 6px;
-      font-weight: 500;
-      color: #ad8300;
-      letter-spacing: 0.2px;
-      border-left: 4px solid #ffd700;
-      box-shadow: 0 2px 8px #ffd70010;
-    }
-    footer {
-      text-align: center;
-      font-size: 1rem;
-      color: #ad8300;
-      padding: 24px;
-      margin-top: 46px;
-      border-top: 2px solid #ffd70033;
-      background: linear-gradient(90deg, #fffbe5 80%, #ffd700 100%);
-      z-index: 1;
-      position: relative;
-      letter-spacing: 1px;
-      box-shadow: 0 2px 24px rgba(255,215,0,0.06);
-    }
-    .footer-icons {
-      margin-top: 10px;
-      font-size: 1.15rem;
-    }
-    .footer-icons .fa {margin: 0 6px; color: #ffd700;}
-    @media (max-width: 800px) {
-      header h1 { font-size: 1.6rem;}
-      .section { padding: 28px 8px; }
-      .gallery img {height: 120px;}
-      .timeline-entry { padding: 9px 8px; }
-    }
-    @media (max-width: 500px) {
-      .profile-img { width: 80px; height: 80px;}
-      .section h2 { font-size: 0.95rem;}
-      .gallery img {height: 60px;}
-    }
-    @keyframes fadeIn {
-      from { opacity: 0;}
-      to { opacity: 1;}
-    }
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(40px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-  </style>
 </head>
 <body>
   <div class="circle-bg">
@@ -287,8 +15,9 @@
     <div class="circle circle2"></div>
     <div class="circle circle3"></div>
   </div>
+
   <header>
-    <img src="image1" alt="Shri Harbansh Singh Ji" class="profile-img" />
+    <img src="images/1.jpg" alt="Shri Harbansh Singh Ji" class="profile-img" />
     <h1>Shri Harbansh Singh Ji</h1>
     <p>Born: 15 July 1947 &middot; Loktantra Rakshak Senani</p>
     <span class="badge"><i class="fa fa-award"></i> Democracy Defender</span>
@@ -308,47 +37,56 @@
   </section>
 
   <section class="section">
-    <h2><i class="fa fa-road"></i> Life Timeline | जीवन यात्रा</h2>
+    <h2><i class="fa fa-road"></i> Life Journey | जीवन यात्रा</h2>
     <div class="timeline">
-      <div class="timeline-entry"><strong>1.</strong> भारत बंद आंदोलन में नाबालिग अवस्था में जेल गए।<em>Jailed as a minor during the Bharat Bandh movement.</em></div>
-      <div class="timeline-entry"><strong>2.</strong> 1974 में श्री जगजीवन बाबू के हेलीकॉप्टर उतरवाने और विरोध के चलते जेल जाना पड़ा।<em>Opposed Jagjivan Ram in 1974; jailed after protesting his helicopter landing.</em></div>
-      <div class="timeline-entry"><strong>3.</strong> ऑल इंडिया रेलवे स्ट्राइक में तन्हाई बैरक में रखा गया।<em>Held in solitary confinement during the All India Railway Strike.</em></div>
-      <div class="timeline-entry"><strong>4.</strong> 1975 आपातकाल में 18 महीने जेल में रहे।<em>Imprisoned for 18 months during the 1975 Emergency.</em></div>
-      <div class="timeline-entry"><strong>5.</strong> 128 रेलवे एक्ट के तहत कर्मचारियों की लड़ाई में 3 महीने जेल।<em>Served 3 months under Railway Act 128 for labor protests.</em></div>
-      <div class="timeline-entry"><strong>6.</strong> रामनगर पीपा पुल टोल माफी आंदोलन में 11 महीने जेल।<em>Spent 11 months in jail protesting toll tax at Ramnagar Pipa Bridge.</em></div>
-      <div class="timeline-entry"><strong>7.</strong> रामनगर शंकर हत्याकांड के विरोध में जेल।<em>Jailed protesting Ramnagar Shankar murder case.</em></div>
-      <div class="timeline-entry"><strong>8.</strong> पुलिस परिषद आंदोलन में महीनों जेल।<em>Months in jail for Police Council movement.</em></div>
-      <div class="timeline-entry"><strong>9.</strong> जनता पार्टी की सरकार में पड़ाव कांड में लाठीचार्ज व जेल।<em>Beaten and jailed during Padav incident under Janata government.</em></div>
-      <div class="timeline-entry"><strong>10.</strong> चंधासी मंडी छापे का विरोध किया, मंडी हफ्तों बंद रही।<em>Led shutdown of Chandasi Mandi protesting government raid.</em></div>
-      <div class="timeline-entry"><strong>11.</strong> 1985, पालिका इंटर कॉलेज में छात्र प्रदर्शन में लाठीचार्ज व 4 दिन जेल।<em>1985 student protest led to baton charge and 4 days in jail.</em></div>
-      <div class="timeline-entry"><strong>12.</strong> बंसंत पेपर मिल के खिलाफ प्रदर्शन में गिरफ्तार।<em>Arrested in protest against Basant Paper Mill.</em></div>
-      <div class="timeline-entry"><strong>13.</strong> इंदिरा गांधी को काला झंडा दिखाने पर गिरफ्तार।<em>Jailed after black-flag protest against Indira Gandhi.</em></div>
-      <div class="timeline-entry"><strong>14.</strong> मुंबई बंदरगाह पर विदेशी गेहूं का विरोध, रामविलास पासवान के साथ गिरफ्तारी।<em>Arrested with Ramvilas Paswan in Mumbai port for wheat import protest.</em></div>
-      <div class="timeline-entry"><strong>15.</strong> मिर्जापुर आंदोलन में पुलिस बर्बरता और गिरफ्तारी।<em>Brutally beaten and arrested in Mirzapur agitation.</em></div>
-      <div class="timeline-entry"><strong>16.</strong> मुगलसराय अग्निशमन कांड में ट्रक व फायर ब्रिगेड जलाने के आरोप में वांछित।<em>Declared wanted for Mughal Sarai fire truck incident; jailed.</em></div>
-      <div class="timeline-entry"><strong>17.</strong> पुलिस द्वारा नाखून उखाड़ने व पैरों में किल्ली ठोकने जैसी यातनाएँ दी गईं।<em>Tortured with nails hammered into feet and nails removed.</em></div>
-      <div class="timeline-entry"><strong>18.</strong> चंधासी कोल मंडी 22 दिन बंद, ट्रांजैक्शन टैक्स के विरोध में।<em>Chandasi coal mandi shut for 22 days against tax.</em></div>
-      <div class="timeline-entry"><strong>19.</strong> 2011, वन विभाग टैक्स विरोध में 14 दिन जेल।<em>Jailed for 14 days in 2011 protesting forest tax.</em></div>
-      <div class="timeline-entry"><strong>20.</strong> कुल 23 बार महीनों जेल जाना पड़ा।<em>Jailed over 23 times, often for months.</em></div>
-      <div class="timeline-entry"><strong>21.</strong> सैकड़ों बार एक-दो दिन के छोटे आंदोलनों में जेल।<em>Arrested hundreds of times for short protests.</em></div>
-      <div class="timeline-entry"><strong>22.</strong> पूर्व विधायक यदुनाथ सिंह, सतनाम सिंह और शमीम मिल्की के साथ अनेक संघर्ष।<em>Fought alongside Yadunath Singh, Satnam Singh, and Shamim Milki.</em></div>
-      <div class="timeline-entry"><strong>23.</strong> लोकतंत्र, श्रमिक अधिकारों और जनहित के लिए जीवन भर संघर्ष।<em>Dedicated life to democracy, workers' rights, and public interest.</em></div>
+      <!-- All 23 timeline points -->
+      <script>
+        const points = [
+          "भारत बंद आंदोलन में नाबालिग अवस्था में जेल गए।",
+          "1974 में श्री जगजीवन बाबू के हेलीकॉप्टर उतरवाने और विरोध के चलते जेल जाना पड़ा।",
+          "ऑल इंडिया रेलवे स्ट्राइक में तन्हाई बैरक में रखा गया।",
+          "1975 आपातकाल में 18 महीने जेल में रहे।",
+          "128 रेलवे एक्ट के तहत कर्मचारियों की लड़ाई में 3 महीने जेल।",
+          "रामनगर पीपा पुल टोल माफी आंदोलन में 11 महीने जेल।",
+          "रामनगर शंकर हत्याकांड के विरोध में जेल।",
+          "पुलिस परिषद आंदोलन में महीनों जेल।",
+          "जनता पार्टी की सरकार में पड़ाव कांड में लाठीचार्ज व जेल।",
+          "चंधासी मंडी छापे का विरोध किया, मंडी हफ्तों बंद रही।",
+          "1985, पालिका इंटर कॉलेज में छात्र प्रदर्शन में लाठीचार्ज व 4 दिन जेल।",
+          "बंसंत पेपर मिल के खिलाफ प्रदर्शन में गिरफ्तार।",
+          "इंदिरा गांधी को काला झंडा दिखाने पर गिरफ्तार।",
+          "मुंबई बंदरगाह पर विदेशी गेहूं का विरोध, रामविलास पासवान के साथ गिरफ्तारी।",
+          "मिर्जापुर आंदोलन में पुलिस बर्बरता और गिरफ्तारी।",
+          "मुगलसराय अग्निशमन कांड में ट्रक व फायर ब्रिगेड जलाने के आरोप में वांछित।",
+          "पुलिस द्वारा नाखून उखाड़ने व पैरों में किल्ली ठोकने जैसी यातनाएँ दी गईं।",
+          "चंधासी कोल मंडी 22 दिन बंद, ट्रांजैक्शन टैक्स के विरोध में।",
+          "2011, वन विभाग टैक्स विरोध में 14 दिन जेल।",
+          "कुल 23 बार महीनों जेल जाना पड़ा।",
+          "सैकड़ों बार एक-दो दिन के छोटे आंदोलनों में जेल।",
+          "पूर्व विधायक यदुनाथ सिंह, सतनाम सिंह और शमीम मिल्की के साथ अनेक संघर्ष।",
+          "लोकतंत्र, श्रमिक अधिकारों और जनहित के लिए जीवन भर संघर्ष।"
+        ];
+        document.write(points.map((text, i) => `
+          <div class="timeline-entry">
+            <strong>${i+1}.</strong> ${text}
+          </div>
+        `).join(""));
+      </script>
     </div>
   </section>
 
   <section class="section">
     <h2><i class="fa fa-image"></i> Photo Gallery | ऐतिहासिक चित्र</h2>
     <div class="gallery">
-     
-      <img src="image5" alt="Group Gathering at Event" />
-      <img src="image6" alt="Honoring Ceremony" />
-      <img src="image7" alt="Celebration with Marigold Garland" />
-      <img src="image8" alt="Celebration with Flower Garlands" />
+      <img src="images/2.jpg" alt="Image 2" />
+      <img src="images/3.jpg" alt="Image 3" />
+      <img src="images/4.jpg" alt="Image 4" />
+      <img src="images/1.jpg" alt="Image 1" />
     </div>
   </section>
 
   <footer>
-    Tribute by Family · Designed with honor · Verified by Google
+    Tribute by Family · Designed with Honor · Verified by Google
     <div class="footer-icons">
       <i class="fa fa-heart"></i>
       <i class="fa fa-award"></i>
