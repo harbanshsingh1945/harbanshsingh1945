@@ -6,154 +6,345 @@
   <meta name="google-site-verification" content="wjPeGDYi_Hu94YIgylEd9CgH9pK57N3UUDp1_OFulXM" />
   <title>Shri Harbansh Singh Ji - Loktantra Rakshak Senani</title>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+Devanagari&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     body {
       font-family: 'Merriweather', serif;
-      background: linear-gradient(to bottom, #ffffff, #f2f7f2);
+      background: linear-gradient(135deg, #e9f7ef 0%, #f2f7f2 70%, #f6e5c2 100%);
       color: #222;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .animated-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      background: transparent;
+    }
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(50px);
+      opacity: 0.3;
+      animation: float 16s linear infinite;
+    }
+    .circle1 { background: #ff9933; width: 300px; height: 300px; top: 10%; left: 5%; animation-delay: 0s;}
+    .circle2 { background: #138808; width: 220px; height: 220px; top: 60%; left: 80%; animation-delay: 4s;}
+    .circle3 { background: #ffd700; width: 180px; height: 180px; top: 70%; left: 15%; animation-delay: 8s;}
+    @keyframes float {
+      0%,100% {transform: translateY(0);}
+      50% {transform: translateY(-30px);}
     }
     header {
-      background: linear-gradient(to right, #ff9933, #ffffff, #138808);
+      background: linear-gradient(to right, #ff9933 0%, #ffffff 50%, #138808 100%);
       color: #000;
-      padding: 70px 20px;
+      padding: 90px 20px 40px 20px;
       text-align: center;
-      animation: fadeIn 1.8s ease-out;
+      animation: fadeIn 2s cubic-bezier(.52,.01,.48,1);
+      border-radius: 0 0 50px 50px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+      position: relative;
+      z-index: 1;
+    }
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+      border: 4px solid #fff;
+      margin-bottom: 20px;
+      animation: popIn 1.2s cubic-bezier(.54,.14,.54,.93);
+      background: #fff;
+    }
+    @keyframes popIn {
+      0% {transform: scale(0); opacity:0;}
+      80% {transform: scale(1.08);}
+      100% {transform: scale(1); opacity:1;}
     }
     header h1 {
       font-size: 3.5rem;
+      font-weight: 700;
       margin: 0;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 16px #fff5;
+      background: linear-gradient(90deg, #ff9933, #138808, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     header p {
       font-size: 1.3rem;
       font-style: italic;
+      margin-top: 8px;
+      letter-spacing: 1px;
+      color: #222;
+    }
+    .badge {
+      display: inline-block;
+      background: #ffd700;
+      color: #222;
+      font-weight: bold;
+      padding: 6px 16px;
+      border-radius: 25px;
+      font-size: 1rem;
+      margin-top: 18px;
+      box-shadow: 0 2px 8px #ffd70070;
     }
     .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-      animation: slideUp 1.2s ease-in-out;
+      position: relative;
+      z-index: 1;
+      padding: 48px 20px;
+      max-width: 980px;
+      margin: 48px auto 0 auto;
+      background: rgba(255,255,255,0.88);
+      border-radius: 18px;
+      box-shadow: 0 3px 24px rgba(0,0,0,0.10);
+      animation: slideUp 1.3s cubic-bezier(.59,.01,.69,.97);
+      overflow: hidden;
     }
     .section h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       border-bottom: 2px solid #555;
       padding-bottom: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: #138808;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .section h2 .fa {
+      color: #ff9933;
+      font-size: 1.5rem;
+    }
+    .section h2 .fa-youtube {color: #e53935;}
+    .section h2 .fa-image {color: #138808;}
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+    .timeline:before {
+      content: '';
+      position: absolute;
+      left: 10px; top: 0;
+      width: 6px; height: 100%;
+      background: linear-gradient(to bottom, #ff9933 0%, #ffd700 100%);
+      border-radius: 3px;
+      opacity: 0.7;
     }
     .timeline-entry {
-      margin-bottom: 25px;
-      border-left: 4px solid #ff9933;
-      padding-left: 15px;
+      position: relative;
+      margin-bottom: 32px;
+      border-left: none;
+      padding-left: 0;
       background: #fff;
-      border-radius: 8px;
-      padding: 15px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+      border-radius: 10px;
+      padding: 18px 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: box-shadow 0.2s;
+      animation: timelineFadeIn 1.2s cubic-bezier(.59,.01,.69,.97);
+    }
+    .timeline-entry:before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 26px;
+      width: 18px;
+      height: 18px;
+      background: linear-gradient(135deg, #ff9933, #ffd700);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px #ffd70033;
+    }
+    @keyframes timelineFadeIn {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .timeline-entry:hover {
+      box-shadow: 0 4px 16px rgba(255,153,51,0.18);
+      background: #fffbe6;
+      transition: box-shadow 0.2s, background 0.2s;
+    }
+    .timeline-entry strong {
+      color: #ff9933;
+      font-size: 1.1rem;
+      margin-right: 10px;
+    }
+    .timeline-entry em {
+      color: #555;
+      font-size: 1rem;
+      display: block;
+      margin-top: 6px;
+      font-style: italic;
     }
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
+      border-radius: 16px;
       overflow: hidden;
+      box-shadow: 0 2px 12px #e5393540;
+      margin-bottom: 8px;
+      background: #fff;
+      animation: fadeIn 1.7s cubic-bezier(.52,.01,.48,1);
     }
     .video-container iframe {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
+      border: none;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 32px;
+      animation: fadeIn 1.7s cubic-bezier(.52,.01,.48,1);
     }
     .gallery img {
       width: 100%;
-      height: auto;
-      border-radius: 6px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      height: 210px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(19,136,8,0.12);
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: #fff;
+    }
+    .gallery img:hover {
+      transform: scale(1.06) rotate(-2deg);
+      box-shadow: 0 8px 32px rgba(19,136,8,0.18);
+      border: 2.5px solid #ffd700;
+      z-index: 2;
     }
     .hindi {
       font-family: 'Noto Sans Devanagari', sans-serif;
-      font-size: 1.05rem;
-      margin-top: 6px;
+      font-size: 1.09rem;
+      margin-top: 8px;
+      background: linear-gradient(90deg,#ff993380,#fff0 90%);
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-weight: 500;
+      color: #222;
+      letter-spacing: 0.2px;
     }
     footer {
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: #666;
-      padding: 20px;
-      margin-top: 40px;
-      border-top: 1px solid #ccc;
+      padding: 28px;
+      margin-top: 60px;
+      border-top: 2px solid #ffd70030;
+      background: linear-gradient(90deg, #f7f7f7 80%, #ffd70020 100%);
+      z-index: 1;
+      position: relative;
+      letter-spacing: 1px;
+    }
+    .footer-icons {
+      margin-top: 10px;
+      font-size: 1.15rem;
+    }
+    .footer-icons .fa {margin: 0 6px; color: #ff9933;}
+    /* Responsive */
+    @media (max-width: 800px) {
+      header h1 { font-size: 2.3rem;}
+      .section { padding: 28px 8px; }
+      .gallery img {height: 140px;}
+      .timeline-entry { padding: 13px 8px; }
+    }
+    @media (max-width: 500px) {
+      .profile-img { width: 90px; height: 90px;}
+      .section h2 { font-size: 1.3rem;}
+      .gallery img {height: 82px;}
     }
     @keyframes fadeIn {
-      from { opacity: 0; } to { opacity: 1; }
+      from { opacity: 0;}
+      to { opacity: 1;}
     }
     @keyframes slideUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>Shri Harbansh Singh Ji</h1>
-  <p>Born: 15 July 1947 · Loktantra Rakshak Senani</p>
-</header>
-
-<section class="section">
-  <h2>Introduction | परिचय</h2>
-  <p><strong>Shri Harbansh Singh Ji</strong> was a fearless voice of democracy. Arrested 23+ times for protesting during India’s Emergency and other movements, he is remembered as a Loktantra Rakshak Senani.</p>
-  <p class="hindi"><strong>श्री हरबंश सिंह जी</strong> एक निडर लोकतंत्र रक्षक सेनानी थे जिन्होंने भारत में कई आंदोलनों के दौरान लोकतंत्र की रक्षा की और 23 से अधिक बार जेल गए।</p>
-</section>
-
-<section class="section">
-  <h2>YouTube Speech</h2>
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/mkNtbTVDTFA" title="Shri Harbansh Singh Ji Speech" frameborder="0" allowfullscreen></iframe>
+  <div class="animated-bg">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
   </div>
-</section>
+  <header>
+    <img src="harbansh_photo.jpg" alt="Harbansh Singh Ji" class="profile-img" />
+    <h1>Shri Harbansh Singh Ji</h1>
+    <p>Born: 15 July 1947 &middot; Loktantra Rakshak Senani</p>
+    <span class="badge"><i class="fa fa-award"></i> Democracy Defender</span>
+  </header>
 
-<section class="section">
-  <h2>Life Timeline | जीवन यात्रा</h2>
-<div class="timeline-entry"><strong>1.</strong> भारत बंद आंदोलन में नाबालिग अवस्था में जेल गए।<br><em>Jailed as a minor during the Bharat Bandh movement.</em></div>
-<div class="timeline-entry"><strong>2.</strong> 1974 में श्री जगजीवन बाबू के हेलीकॉप्टर उतरवाने और विरोध के चलते जेल जाना पड़ा।<br><em>Opposed Jagjivan Ram in 1974; jailed after protesting his helicopter landing.</em></div>
-<div class="timeline-entry"><strong>3.</strong> ऑल इंडिया रेलवे स्ट्राइक में तन्हाई बैरक में रखा गया।<br><em>Held in solitary confinement during the All India Railway Strike.</em></div>
-<div class="timeline-entry"><strong>4.</strong> 1975 आपातकाल में 18 महीने जेल में रहे।<br><em>Imprisoned for 18 months during the 1975 Emergency.</em></div>
-<div class="timeline-entry"><strong>5.</strong> 128 रेलवे एक्ट के तहत कर्मचारियों की लड़ाई में 3 महीने जेल।<br><em>Served 3 months under Railway Act 128 for labor protests.</em></div>
-<div class="timeline-entry"><strong>6.</strong> रामनगर पीपा पुल टोल माफी आंदोलन में 11 महीने जेल।<br><em>Spent 11 months in jail protesting toll tax at Ramnagar Pipa Bridge.</em></div>
-<div class="timeline-entry"><strong>7.</strong> रामनगर शंकर हत्याकांड के विरोध में जेल।<br><em>Jailed protesting Ramnagar Shankar murder case.</em></div>
-<div class="timeline-entry"><strong>8.</strong> पुलिस परिषद आंदोलन में महीनों जेल।<br><em>Months in jail for Police Council movement.</em></div>
-<div class="timeline-entry"><strong>9.</strong> जनता पार्टी की सरकार में पड़ाव कांड में लाठीचार्ज व जेल।<br><em>Beaten and jailed during Padav incident under Janata government.</em></div>
-<div class="timeline-entry"><strong>10.</strong> चंधासी मंडी छापे का विरोध किया, मंडी हफ्तों बंद रही।<br><em>Led shutdown of Chandasi Mandi protesting government raid.</em></div>
-<div class="timeline-entry"><strong>11.</strong> 1985, पालिका इंटर कॉलेज में छात्र प्रदर्शन में लाठीचार्ज व 4 दिन जेल।<br><em>1985 student protest led to baton charge and 4 days in jail.</em></div>
-<div class="timeline-entry"><strong>12.</strong> बंसंत पेपर मिल के खिलाफ प्रदर्शन में गिरफ्तार।<br><em>Arrested in protest against Basant Paper Mill.</em></div>
-<div class="timeline-entry"><strong>13.</strong> इंदिरा गांधी को काला झंडा दिखाने पर गिरफ्तार।<br><em>Jailed after black-flag protest against Indira Gandhi.</em></div>
-<div class="timeline-entry"><strong>14.</strong> मुंबई बंदरगाह पर विदेशी गेहूं का विरोध, रामविलास पासवान के साथ गिरफ्तारी।<br><em>Arrested with Ramvilas Paswan in Mumbai port for wheat import protest.</em></div>
-<div class="timeline-entry"><strong>15.</strong> मिर्जापुर आंदोलन में पुलिस बर्बरता और गिरफ्तारी।<br><em>Brutally beaten and arrested in Mirzapur agitation.</em></div>
-<div class="timeline-entry"><strong>16.</strong> मुगलसराय अग्निशमन कांड में ट्रक व फायर ब्रिगेड जलाने के आरोप में वांछित।<br><em>Declared wanted for Mughal Sarai fire truck incident; jailed.</em></div>
-<div class="timeline-entry"><strong>17.</strong> पुलिस द्वारा नाखून उखाड़ने व पैरों में किल्ली ठोकने जैसी यातनाएँ दी गईं।<br><em>Tortured with nails hammered into feet and nails removed.</em></div>
-<div class="timeline-entry"><strong>18.</strong> चंधासी कोल मंडी 22 दिन बंद, ट्रांजैक्शन टैक्स के विरोध में।<br><em>Chandasi coal mandi shut for 22 days against tax.</em></div>
-<div class="timeline-entry"><strong>19.</strong> 2011, वन विभाग टैक्स विरोध में 14 दिन जेल।<br><em>Jailed for 14 days in 2011 protesting forest tax.</em></div>
-<div class="timeline-entry"><strong>20.</strong> कुल 23 बार महीनों जेल जाना पड़ा।<br><em>Jailed over 23 times, often for months.</em></div>
-<div class="timeline-entry"><strong>21.</strong> सैकड़ों बार एक-दो दिन के छोटे आंदोलनों में जेल।<br><em>Arrested hundreds of times for short protests.</em></div>
-<div class="timeline-entry"><strong>22.</strong> पूर्व विधायक यदुनाथ सिंह, सतनाम सिंह और शमीम मिल्की के साथ अनेक संघर्ष।<br><em>Fought alongside Yadunath Singh, Satnam Singh, and Shamim Milki.</em></div>
-<div class="timeline-entry"><strong>23.</strong> लोकतंत्र, श्रमिक अधिकारों और जनहित के लिए जीवन भर संघर्ष।<br><em>Dedicated life to democracy, workers' rights, and public interest.</em></div>
+  <section class="section">
+    <h2><i class="fa fa-user"></i> Introduction | परिचय</h2>
+    <p><strong>Shri Harbansh Singh Ji</strong> was a fearless voice of democracy. Arrested 23+ times for protesting during India’s Emergency and other movements, he is remembered as a Loktantra Rakshak Senani.</p>
+    <p class="hindi"><strong>श्री हरबंश सिंह जी</strong> एक निडर लोकतंत्र रक्षक सेनानी थे जिन्होंने भारत में कई आंदोलनों के दौरान लोकतंत्र की रक्षा की और 23 से अधिक बार जेल गए।</p>
+  </section>
 
-</section>
+  <section class="section">
+    <h2><i class="fa fa-youtube"></i> YouTube Speech</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/mkNtbTVDTFA" title="Shri Harbansh Singh Ji Speech" allowfullscreen></iframe>
+    </div>
+  </section>
 
-<section class="section">
-  <h2>Photo Gallery | ऐतिहासिक चित्र</h2>
-  <div class="gallery">
-    <img src="harbansh_photo.jpg" alt="Harbansh Singh Photo" />
-    <img src="harbansh_photo.jpg" alt="Historic Moment" />
-  </div>
-</section>
+  <section class="section">
+    <h2><i class="fa fa-road"></i> Life Timeline | जीवन यात्रा</h2>
+    <div class="timeline">
+      <div class="timeline-entry"><strong>1.</strong> भारत बंद आंदोलन में नाबालिग अवस्था में जेल गए।<em>Jailed as a minor during the Bharat Bandh movement.</em></div>
+      <div class="timeline-entry"><strong>2.</strong> 1974 में श्री जगजीवन बाबू के हेलीकॉप्टर उतरवाने और विरोध के चलते जेल जाना पड़ा।<em>Opposed Jagjivan Ram in 1974; jailed after protesting his helicopter landing.</em></div>
+      <div class="timeline-entry"><strong>3.</strong> ऑल इंडिया रेलवे स्ट्राइक में तन्हाई बैरक में रखा गया।<em>Held in solitary confinement during the All India Railway Strike.</em></div>
+      <div class="timeline-entry"><strong>4.</strong> 1975 आपातकाल में 18 महीने जेल में रहे।<em>Imprisoned for 18 months during the 1975 Emergency.</em></div>
+      <div class="timeline-entry"><strong>5.</strong> 128 रेलवे एक्ट के तहत कर्मचारियों की लड़ाई में 3 महीने जेल।<em>Served 3 months under Railway Act 128 for labor protests.</em></div>
+      <div class="timeline-entry"><strong>6.</strong> रामनगर पीपा पुल टोल माफी आंदोलन में 11 महीने जेल।<em>Spent 11 months in jail protesting toll tax at Ramnagar Pipa Bridge.</em></div>
+      <div class="timeline-entry"><strong>7.</strong> रामनगर शंकर हत्याकांड के विरोध में जेल।<em>Jailed protesting Ramnagar Shankar murder case.</em></div>
+      <div class="timeline-entry"><strong>8.</strong> पुलिस परिषद आंदोलन में महीनों जेल।<em>Months in jail for Police Council movement.</em></div>
+      <div class="timeline-entry"><strong>9.</strong> जनता पार्टी की सरकार में पड़ाव कांड में लाठीचार्ज व जेल।<em>Beaten and jailed during Padav incident under Janata government.</em></div>
+      <div class="timeline-entry"><strong>10.</strong> चंधासी मंडी छापे का विरोध किया, मंडी हफ्तों बंद रही।<em>Led shutdown of Chandasi Mandi protesting government raid.</em></div>
+      <div class="timeline-entry"><strong>11.</strong> 1985, पालिका इंटर कॉलेज में छात्र प्रदर्शन में लाठीचार्ज व 4 दिन जेल।<em>1985 student protest led to baton charge and 4 days in jail.</em></div>
+      <div class="timeline-entry"><strong>12.</strong> बंसंत पेपर मिल के खिलाफ प्रदर्शन में गिरफ्तार।<em>Arrested in protest against Basant Paper Mill.</em></div>
+      <div class="timeline-entry"><strong>13.</strong> इंदिरा गांधी को काला झंडा दिखाने पर गिरफ्तार।<em>Jailed after black-flag protest against Indira Gandhi.</em></div>
+      <div class="timeline-entry"><strong>14.</strong> मुंबई बंदरगाह पर विदेशी गेहूं का विरोध, रामविलास पासवान के साथ गिरफ्तारी।<em>Arrested with Ramvilas Paswan in Mumbai port for wheat import protest.</em></div>
+      <div class="timeline-entry"><strong>15.</strong> मिर्जापुर आंदोलन में पुलिस बर्बरता और गिरफ्तारी।<em>Brutally beaten and arrested in Mirzapur agitation.</em></div>
+      <div class="timeline-entry"><strong>16.</strong> मुगलसराय अग्निशमन कांड में ट्रक व फायर ब्रिगेड जलाने के आरोप में वांछित।<em>Declared wanted for Mughal Sarai fire truck incident; jailed.</em></div>
+      <div class="timeline-entry"><strong>17.</strong> पुलिस द्वारा नाखून उखाड़ने व पैरों में किल्ली ठोकने जैसी यातनाएँ दी गईं।<em>Tortured with nails hammered into feet and nails removed.</em></div>
+      <div class="timeline-entry"><strong>18.</strong> चंधासी कोल मंडी 22 दिन बंद, ट्रांजैक्शन टैक्स के विरोध में।<em>Chandasi coal mandi shut for 22 days against tax.</em></div>
+      <div class="timeline-entry"><strong>19.</strong> 2011, वन विभाग टैक्स विरोध में 14 दिन जेल।<em>Jailed for 14 days in 2011 protesting forest tax.</em></div>
+      <div class="timeline-entry"><strong>20.</strong> कुल 23 बार महीनों जेल जाना पड़ा।<em>Jailed over 23 times, often for months.</em></div>
+      <div class="timeline-entry"><strong>21.</strong> सैकड़ों बार एक-दो दिन के छोटे आंदोलनों में जेल।<em>Arrested hundreds of times for short protests.</em></div>
+      <div class="timeline-entry"><strong>22.</strong> पूर्व विधायक यदुनाथ सिंह, सतनाम सिंह और शमीम मिल्की के साथ अनेक संघर्ष।<em>Fought alongside Yadunath Singh, Satnam Singh, and Shamim Milki.</em></div>
+      <div class="timeline-entry"><strong>23.</strong> लोकतंत्र, श्रमिक अधिकारों और जनहित के लिए जीवन भर संघर्ष।<em>Dedicated life to democracy, workers' rights, and public interest.</em></div>
+    </div>
+  </section>
 
-<footer>
-  Tribute by Family · Designed with honor · Verified by Google
-</footer>
+  <section class="section">
+    <h2><i class="fa fa-image"></i> Photo Gallery | ऐतिहासिक चित्र</h2>
+    <div class="gallery">
+      <img src="harbansh_photo.jpg" alt="Harbansh Singh Photo" />
+      <img src="harbansh_photo.jpg" alt="Historic Moment" />
+      <img src="harbansh_photo.jpg" alt="Legacy" />
+      <!-- Add more images for a richer gallery -->
+    </div>
+  </section>
 
+  <footer>
+    Tribute by Family · Designed with honor · Verified by Google
+    <div class="footer-icons">
+      <i class="fa fa-heart"></i>
+      <i class="fa fa-award"></i>
+      <i class="fa fa-youtube"></i>
+      <i class="fa fa-indian-rupee-sign"></i>
+    </div>
+  </footer>
 </body>
 </html>
