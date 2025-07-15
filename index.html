@@ -1,70 +1,145 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shri Harbansh Singh Ji - Tribute</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Shri Harbansh Singh Ji Tribute</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #fcfcfc;
+      margin: 0;
+      color: #2f2f2f;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeInDown 1.5s ease;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      color: #fff;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-top: 10px;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      animation: fadeInUp 1s ease;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #34495e;
+      border-bottom: 2px solid #ffa500;
+      display: inline-block;
+    }
+    .intro {
+      background: #fff9f0;
+      padding: 25px;
+      border-left: 6px solid #f39c12;
+      border-radius: 6px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    }
+    .timeline ul { list-style: none; padding: 0; }
+    .timeline li {
+      background: #ffffff;
+      border-left: 5px solid #2980b9;
+      padding: 15px 20px;
+      margin: 15px 0;
+      border-radius: 6px;
+      position: relative;
+      animation: slideIn 0.7s ease forwards;
+      opacity: 0;
+    }
+    .timeline li:nth-child(even) { border-left-color: #27ae60; }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .photo-grid img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .photo-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+    iframe {
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn { to { opacity: 1; transform: translateX(0); } }
+  </style>
 </head>
 <body>
   <header>
     <h1>Shri Harbansh Singh Ji</h1>
-    <p>Loktantra Rakshak Senani</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/mkNtbTVDTFA"
-    title="Harbansh Singh Ji Speech" frameborder="0" allowfullscreen></iframe>
+    <p>A Tribute to a Loktantra Rakshak Senani</p>
   </header>
-
   <main>
     <section class="intro">
-  <h2>परिचय • Introduction</h2>
-  <p>
-    श्री हरबंश सिंह जी का जन्म <strong>15 जुलाई 1945</strong> को हुआ था। वह लोकतंत्र की रक्षा के लिए किए गए संघर्षों में एक अग्रणी सेनानी थे।
-  </p>
-  <p>
-    Shri Harbansh Singh Ji was born on <strong>15 July 1945</strong>. He was a fearless activist and Loktantra Rakshak Senani who fought bravely during the Emergency and numerous people’s movements across India.
-  </p>
-</section>
+      <h2>परिचय • Introduction</h2>
+      <p>श्री हरबंश सिंह जी का जन्म <strong>15 जुलाई 1945</strong> को हुआ था। वह लोकतंत्र की रक्षा के लिए किए गए संघर्षों में एक अग्रणी सेनानी थे।</p>
+      <p>Shri Harbansh Singh Ji was born on <strong>15 July 1945</strong>. He was a fearless activist and Loktantra Rakshak Senani who fought bravely during the Emergency and numerous people’s movements across India.</p>
+    </section>
     <section class="timeline">
-      <h2>जीवन यात्रा • Life Journey</h2>
-       <ul>
-  <li>1. नाबालिग अवस्था में भारत बंद आंदोलन में भाग लिया और 1 महीने जेल में रहे।<br>Participated in the Bharat Bandh movement as a minor and was jailed for one month.</li>
-  <li>2. 1974 में श्री जगजीवन बाबू के खिलाफ हेलीकॉप्टर विरोध प्रदर्शन किया, भागना पड़ा और जेल जाना पड़ा।<br>Protested against Jagjivan Babu's helicopter landing in 1974; was arrested and had to flee.</li>
-  <li>3. ऑल इंडिया रेलवे स्ट्राइक में हिस्सा लिया, एक महीने सोलिटरी बैरक में रहे।<br>Participated in the All India Railway Strike under George Fernandes, spent one month in solitary jail.</li>
-  <li>4. आपातकाल के दौरान 18 महीने जेल में बंद रहे और मानसिक व शारीरिक यातनाएं झेलीं।<br>Detained during the Emergency (1975–77) for 18 months, faced intense torture and isolation.</li>
-  <li>5. रेलवे गैंगमैन कर्मचारियों की लड़ाई में 128 रेलवे एक्ट के तहत 3 महीने जेल।<br>Fought for railway gangman rights, jailed under Section 128 for 3 months.</li>
-  <li>6. रामनगर पीपा पुल टोल माफ करने के आंदोलन में 11 महीने जेल में रहे।<br>Led the protest to waive toll at Ramnagar bridge, jailed for 11 months.</li>
-  <li>7. रामनगर शंकर हत्याकांड में गिरफ्तारी की मांग पर जेल गए।<br>Jailed during protests demanding arrests in the Ramnagar Shankar murder case.</li>
-  <li>8. पुलिस परिषद आंदोलन में महीनों जेल में रहे, एक पुलिस जवान ने भी गिरफ्तारी दी।<br>Spent months in jail during the Police Parishad protest; even a police constable joined him.</li>
-  <li>9. पड़ाव कांड में जनता पार्टी सरकार में गिरफ्तारी व लाठीचार्ज का सामना किया।<br>Faced arrest and brutal lathi charge during the Padav incident even under Janata Party rule.</li>
-  <li>10. चन्धासी मंडी छापे का विरोध किया, हफ्तों मंडी बंद रखी।<br>Opposed raid at Chandasi Mandi, kept the mandi shut for weeks in protest.</li>
-  <li>11. 1985 में छात्र आंदोलन में लाठीचार्ज हुआ, 4 दिन जेल में रहे।<br>Lathi-charged and jailed for 4 days during a student protest in 1985.</li>
-  <li>12. बसंत पेपर मिल आंदोलन में बेरोजगारों के हक में प्रदर्शन किया और गिरफ्तार हुए।<br>Protested for unemployed at Basant Paper Mill and was arrested.</li>
-  <li>13. इंदिरा गांधी को काला झंडा दिखाने के कारण गिरफ्तार हुए।<br>Arrested for showing a black flag to Indira Gandhi, jailed in Ramnagar.</li>
-  <li>14. रामविलास पासवान जी के साथ मुंबई बंदरगाह पर विदेशी गेहूं का विरोध किया, दोनों गिरफ्तार हुए।<br>With Ram Vilas Paswan, protested imported wheat at Mumbai port; both arrested.</li>
-  <li>15. मिर्जापुर आंदोलन में पुलिस लाठीचार्ज और गिरफ्तारी हुई।<br>Faced lathi charge and arrest during Mirzapur agitation.</li>
-  <li>16. मुगलसराय फायर ब्रिगेड कांड में पुलिस द्वारा “जिंदा या मुर्दा” पकड़ने का आदेश, गिरफ्तारी हुई।<br>Declared wanted dead or alive in the Mughalsarai fire brigade incident; eventually jailed.</li>
-  <li>17. यातनाओं में पुलिस ने पैर और हाथ में किल्ली ठोकी, नाखून उखाड़े।<br>Suffered extreme police brutality — nails were removed, limbs injured with iron nails.</li>
-  <li>18. चन्धासी मंडी में 700% टैक्स विरोध में 22 दिन मंडी बंद रखी, 14 दिन जेल में रहे।<br>Led protest against 700% tax in Chandasi coal market; 22 days closure, jailed for 14 days.</li>
-  <li>19. कुल 23 बार महीनों की अवधि तक जेल में रहे।<br>Jailed more than 23 times for extended durations.</li>
-  <li>20. सैकड़ों छोटे आंदोलनों में 1–2 दिन की जेल हुई।<br>Over 100+ small protests resulted in 1–2 day imprisonments.</li>
-  <li>21. इन आंदोलनों में पूर्व विधायक यदुनाथ सिंह, सतनाम सिंह, शमीम मिल्की सहित सैकड़ों लोगों ने साथ दिया।<br>Worked alongside MLA Yadunath Singh, Sardar Satnam Singh, Shamim Milki, and many supporters.</li>
-</ul>
+      <h2>Life Journey • जीवन यात्रा</h2>
+      <ul>
+        <li>Participated in the Bharat Bandh movement as a minor and was jailed for 1 month.</li>
+        <li>In 1974, protested against Railway Minister Jagjivan Ram by blocking his helicopter landing.</li>
+        <li>Jailed in solitary confinement during the All India Railway Strike led by George Fernandes.</li>
+        <li>Imprisoned for 18 months during the 1975 Emergency; faced torture and isolation.</li>
+        <li>Jailed under Section 128 of the Railway Act during protests for gangman rights.</li>
+        <li>Led agitation against Ramnagar toll tax; jailed for 11 months.</li>
+        <li>And many more contributions in India's democratic history…</li>
+      </ul>
     </section>
     <section class="gallery">
       <h2>Photo Gallery</h2>
       <div class="photo-grid">
-        <img src="1000000352.webp" alt="Photo 1" />   
-        <img src="1000000346.webp" alt="Photo 3" />
-        <img src="1000000337.webp" alt="Photo 4" />
-        <img src="1000000339.webp" alt="Photo 5" />
-        <img src="1000000319.webp" alt="Photo 6" />
-        <img src="1000003162.jpg" alt="Photo 7" />
+        <img src="photos/1000000345.webp" alt="Photo 1" />
+        <img src="photos/1000000346.webp" alt="Photo 2" />
+      </div>
+    </section>
+    <section class="video">
+      <h2>Watch His Story</h2>
+      <div style="text-align:center">
+        <iframe width="90%" height="315" src="https://www.youtube.com/embed/mkNtbTVDTFA" frameborder="0" allowfullscreen></iframe>
       </div>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Tribute by Family & Well-Wishers</p>
-  </footer>
+  <footer>&copy; 2025 Tribute to Shri Harbansh Singh Ji | Designed with respect and love</footer>
 </body>
 </html>
