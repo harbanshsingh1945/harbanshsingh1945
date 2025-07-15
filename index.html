@@ -5,94 +5,195 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="wjPeGDYi_Hu94YIgylEd9CgH9pK57N3UUDp1_OFulXM" />
   <title>Shri Harbansh Singh Ji - Loktantra Rakshak Senani</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #0d1b2a, #1b263b);
+      color: #e0e1dd;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background: linear-gradient(to right, #1b263b, #415a77);
+      color: #f4d35e;
+      border-bottom: 5px solid #f4d35e;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #f4d35e;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px #000;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      margin: 10px 0;
+      color: #f4d35e;
+    }
+
+    p, .badge {
+      font-size: 1rem;
+      color: #f4f1e1;
+    }
+
+    .badge {
+      background: #f4d35e;
+      color: #1b263b;
+      padding: 6px 14px;
+      border-radius: 25px;
+      display: inline-block;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 960px;
+      margin: auto;
+      background: #1b263b;
+      border-top: 2px solid #f4d35e;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: #f4d35e;
+      border-bottom: 2px solid #f4d35e;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .timeline-entry {
+      margin-bottom: 20px;
+      background: #0d1b2a;
+      padding: 15px 20px;
+      border-left: 4px solid #f4d35e;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px #00000050;
+    }
+
+    .timeline-entry strong {
+      color: #f4d35e;
+    }
+
+    .timeline-entry em {
+      display: block;
+      margin-top: 6px;
+      font-style: italic;
+      color: #adb5bd;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px #00000040;
+      margin-bottom: 20px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #f4d35e;
+      box-shadow: 0 4px 14px #00000060;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .hindi {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      background: #415a77;
+      padding: 10px;
+      border-left: 4px solid #f4d35e;
+      border-radius: 6px;
+      color: #f8f9fa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 1rem;
+      background: #0d1b2a;
+      color: #ccc;
+      border-top: 3px solid #f4d35e;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <div class="circle-bg">
-    <div class="circle circle1"></div>
-    <div class="circle circle2"></div>
-    <div class="circle circle3"></div>
-  </div>
-
   <header>
-    <img src="images/1.jpg" alt="Shri Harbansh Singh Ji" class="profile-img" />
+    <img src="1000004156_web.jpg" alt="Shri Harbansh Singh Ji" class="profile-img" />
     <h1>Shri Harbansh Singh Ji</h1>
-    <p>Born: 15 July 1947 &middot; Loktantra Rakshak Senani</p>
-    <span class="badge"><i class="fa fa-award"></i> Democracy Defender</span>
+    <p>Born: 15 July 1947 · Loktantra Rakshak Senani</p>
+    <div class="badge">Democracy Defender</div>
   </header>
 
   <section class="section">
-    <h2><i class="fa fa-user"></i> Introduction | परिचय</h2>
+    <h2>Introduction | परिचय</h2>
     <p><strong>Shri Harbansh Singh Ji</strong> was a fearless voice of democracy. Arrested 23+ times for protesting during India’s Emergency and other movements, he is remembered as a Loktantra Rakshak Senani.</p>
     <p class="hindi"><strong>श्री हरबंश सिंह जी</strong> एक निडर लोकतंत्र रक्षक सेनानी थे जिन्होंने भारत में कई आंदोलनों के दौरान लोकतंत्र की रक्षा की और 23 से अधिक बार जेल गए।</p>
   </section>
 
   <section class="section">
-    <h2><i class="fa fa-youtube"></i> YouTube Speech</h2>
+    <h2>YouTube Speech</h2>
     <div class="video-container">
       <iframe src="https://www.youtube.com/embed/mkNtbTVDTFA" title="Shri Harbansh Singh Ji Speech" allowfullscreen></iframe>
     </div>
   </section>
 
   <section class="section">
-    <h2><i class="fa fa-road"></i> Life Journey | जीवन यात्रा</h2>
+    <h2>Life Timeline | जीवन यात्रा</h2>
     <div class="timeline">
-      <!-- All 23 timeline points -->
-      <script>
-        const points = [
-          "भारत बंद आंदोलन में नाबालिग अवस्था में जेल गए।",
-          "1974 में श्री जगजीवन बाबू के हेलीकॉप्टर उतरवाने और विरोध के चलते जेल जाना पड़ा।",
-          "ऑल इंडिया रेलवे स्ट्राइक में तन्हाई बैरक में रखा गया।",
-          "1975 आपातकाल में 18 महीने जेल में रहे।",
-          "128 रेलवे एक्ट के तहत कर्मचारियों की लड़ाई में 3 महीने जेल।",
-          "रामनगर पीपा पुल टोल माफी आंदोलन में 11 महीने जेल।",
-          "रामनगर शंकर हत्याकांड के विरोध में जेल।",
-          "पुलिस परिषद आंदोलन में महीनों जेल।",
-          "जनता पार्टी की सरकार में पड़ाव कांड में लाठीचार्ज व जेल।",
-          "चंधासी मंडी छापे का विरोध किया, मंडी हफ्तों बंद रही।",
-          "1985, पालिका इंटर कॉलेज में छात्र प्रदर्शन में लाठीचार्ज व 4 दिन जेल।",
-          "बंसंत पेपर मिल के खिलाफ प्रदर्शन में गिरफ्तार।",
-          "इंदिरा गांधी को काला झंडा दिखाने पर गिरफ्तार।",
-          "मुंबई बंदरगाह पर विदेशी गेहूं का विरोध, रामविलास पासवान के साथ गिरफ्तारी।",
-          "मिर्जापुर आंदोलन में पुलिस बर्बरता और गिरफ्तारी।",
-          "मुगलसराय अग्निशमन कांड में ट्रक व फायर ब्रिगेड जलाने के आरोप में वांछित।",
-          "पुलिस द्वारा नाखून उखाड़ने व पैरों में किल्ली ठोकने जैसी यातनाएँ दी गईं।",
-          "चंधासी कोल मंडी 22 दिन बंद, ट्रांजैक्शन टैक्स के विरोध में।",
-          "2011, वन विभाग टैक्स विरोध में 14 दिन जेल।",
-          "कुल 23 बार महीनों जेल जाना पड़ा।",
-          "सैकड़ों बार एक-दो दिन के छोटे आंदोलनों में जेल।",
-          "पूर्व विधायक यदुनाथ सिंह, सतनाम सिंह और शमीम मिल्की के साथ अनेक संघर्ष।",
-          "लोकतंत्र, श्रमिक अधिकारों और जनहित के लिए जीवन भर संघर्ष।"
-        ];
-        document.write(points.map((text, i) => `
-          <div class="timeline-entry">
-            <strong>${i+1}.</strong> ${text}
-          </div>
-        `).join(""));
-      </script>
+      <div class="timeline-entry"><strong>1.</strong> भारत बंद आंदोलन में नाबालिग अवस्था में जेल गए।<em>Jailed as a minor during the Bharat Bandh movement.</em></div>
+      <div class="timeline-entry"><strong>2.</strong> 1974 में श्री जगजीवन बाबू के हेलीकॉप्टर उतरवाने और विरोध के चलते जेल जाना पड़ा।<em>Opposed Jagjivan Ram in 1974; jailed after protesting his helicopter landing.</em></div>
+      <div class="timeline-entry"><strong>3.</strong> ऑल इंडिया रेलवे स्ट्राइक में तन्हाई बैरक में रखा गया।<em>Held in solitary confinement during the All India Railway Strike.</em></div>
+      <div class="timeline-entry"><strong>4.</strong> 1975 आपातकाल में 18 महीने जेल में रहे।<em>Imprisoned for 18 months during the 1975 Emergency.</em></div>
+      <div class="timeline-entry"><strong>5.</strong> ... और अन्य कुल 23 बार गिरफ्तारियों का सामना किया।<em>In total, jailed more than 23 times in his life.</em></div>
     </div>
   </section>
 
   <section class="section">
-    <h2><i class="fa fa-image"></i> Photo Gallery | ऐतिहासिक चित्र</h2>
+    <h2>Photo Gallery | ऐतिहासिक चित्र</h2>
     <div class="gallery">
-      <img src="images/2.jpg" alt="Image 2" />
-      <img src="images/3.jpg" alt="Image 3" />
-      <img src="images/4.jpg" alt="Image 4" />
-      <img src="images/1.jpg" alt="Image 1" />
+      <img src="1000004165_web.jpg" alt="Event 1" />
+      <img src="1000004166_web.jpg" alt="Event 2" />
+      <img src="1000004167_web.jpg" alt="Event 3" />
+      <img src="1000004156_web.jpg" alt="Event 4" />
     </div>
   </section>
 
   <footer>
     Tribute by Family · Designed with Honor · Verified by Google
-    <div class="footer-icons">
-      <i class="fa fa-heart"></i>
-      <i class="fa fa-award"></i>
-      <i class="fa fa-youtube"></i>
-      <i class="fa fa-indian-rupee-sign"></i>
-    </div>
   </footer>
 </body>
 </html>
