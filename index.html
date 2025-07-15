@@ -10,8 +10,8 @@
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(120deg, #fffbe8 0%, #ffe6b3 60%, #ffd700 100%);
-      color: #ad8300;
+      background: linear-gradient(120deg, #fffef8 0%, #fdf6e3 60%, #ffd700 100%);
+      color: #7d6332;
       margin: 0;
       padding: 0;
       min-height: 100vh;
@@ -32,35 +32,35 @@
       position: absolute;
       border-radius: 50%;
       filter: blur(60px);
-      opacity: 0.19;
+      opacity: 0.15;
       animation: circleFloat 18s linear infinite alternate;
     }
-    .circle1 { background: #ff9900; width: 320px; height: 320px; top: 13%; left: 8%; animation-delay: 0s;}
-    .circle2 { background: #ffd700; width: 220px; height: 220px; top: 67%; left: 82%; animation-delay: 4s;}
-    .circle3 { background: #ffe6b3; width: 150px; height: 150px; top: 75%; left: 17%; animation-delay: 8s;}
+    .circle1 { background: #ffe29a; width: 300px; height: 300px; top: 13%; left: 8%; animation-delay: 0s;}
+    .circle2 { background: #ffd700; width: 180px; height: 180px; top: 67%; left: 82%; animation-delay: 4s;}
+    .circle3 { background: #fdf6e3; width: 120px; height: 120px; top: 75%; left: 17%; animation-delay: 8s;}
     @keyframes circleFloat {
       0%,100% {transform: translateY(0);}
       50% {transform: translateY(-38px);}
     }
     header {
-      background: linear-gradient(95deg, #fffbe5 0%, #ffd700 80%);
-      color: #ad8300;
-      padding: 82px 20px 38px 20px;
+      background: linear-gradient(95deg, #fffbe5 0%, #ffe29a 80%);
+      color: #7d6332;
+      padding: 70px 20px 32px 20px;
       text-align: center;
       animation: fadeIn 2s cubic-bezier(.52,.01,.48,1);
-      border-radius: 0 0 50px 50px;
-      box-shadow: 0 8px 32px rgba(255,215,0,0.08);
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 8px 32px rgba(255,215,0,0.06);
       position: relative;
       z-index: 1;
     }
     .profile-img {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 8px 32px rgba(255,153,0,0.13);
-      border: 4px solid #fff7e6;
-      margin-bottom: 22px;
+      box-shadow: 0 8px 32px rgba(255,215,0,0.10);
+      border: 4px solid #fffef8;
+      margin-bottom: 18px;
       animation: popIn 1.2s cubic-bezier(.54,.14,.54,.93);
       background: #fff;
     }
@@ -70,53 +70,53 @@
       100% {transform: scale(1); opacity:1;}
     }
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       font-weight: 700;
       margin: 0;
       letter-spacing: 1.5px;
       text-shadow: 0 2px 12px #fff3;
-      background: linear-gradient(90deg, #ffd700, #ff9900, #ffe6b3, #fffde4);
+      background: linear-gradient(90deg, #d4af37, #ffd700, #ffe29a, #fffde4);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     header p {
-      font-size: 1.08rem;
+      font-size: 1rem;
       font-style: italic;
       margin-top: 8px;
       letter-spacing: 1px;
-      color: #ad8300;
+      color: #7d6332;
     }
     .badge {
       display: inline-block;
-      background: linear-gradient(90deg, #ffd700, #ff9900);
-      color: #ad8300;
+      background: linear-gradient(90deg, #ffd700, #ffe29a);
+      color: #7d6332;
       font-weight: bold;
       padding: 6px 18px;
       border-radius: 25px;
       font-size: 1rem;
       margin-top: 18px;
-      box-shadow: 0 2px 8px #ffd70055;
+      box-shadow: 0 2px 8px #ffd70040;
       letter-spacing: 1px;
     }
     .section {
       position: relative;
       z-index: 1;
-      padding: 52px 20px;
-      max-width: 980px;
-      margin: 56px auto 0 auto;
-      background: rgba(255,249,224,0.98);
-      border-radius: 20px;
-      box-shadow: 0 4px 32px rgba(255,153,0,0.06);
+      padding: 44px 20px;
+      max-width: 960px;
+      margin: 48px auto 0 auto;
+      background: rgba(255,253,236,0.97);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(255,215,0,0.04);
       animation: slideUp 1.3s cubic-bezier(.59,.01,.69,.97);
-      border: 1.5px solid #ffd700;
+      border: 1.2px solid #ffd700;
       overflow: hidden;
       backdrop-filter: blur(2px);
     }
     .section h2 {
-      font-size: 1.7rem;
+      font-size: 1.45rem;
       border-bottom: 2px solid #ffd700;
       padding-bottom: 10px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       letter-spacing: 1px;
       font-weight: 700;
       color: #ad8300;
@@ -126,8 +126,8 @@
       text-shadow: 0 2px 8px #ffd70033;
     }
     .section h2 .fa {
-      color: #ff9900;
-      font-size: 1.35rem;
+      color: #d4af37;
+      font-size: 1.25rem;
     }
     .section h2 .fa-youtube {color: #e53935;}
     .section h2 .fa-image {color: #ffd700;}
@@ -139,20 +139,20 @@
       content: '';
       position: absolute;
       left: 10px; top: 0;
-      width: 6px; height: 100%;
-      background: linear-gradient(to bottom, #ffd700 0%, #ff9900 100%);
+      width: 5px; height: 100%;
+      background: linear-gradient(to bottom, #ffd700 0%, #ffe29a 100%);
       border-radius: 3px;
       opacity: 0.7;
     }
     .timeline-entry {
       position: relative;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
       border-left: none;
       padding-left: 0;
-      background: linear-gradient(90deg,#fffbe8 70%,#ffd700 100%);
+      background: linear-gradient(90deg,#fffef8 70%,#ffe29a 100%);
       border-radius: 10px;
-      padding: 18px 22px;
-      box-shadow: 0 2px 8px rgba(255,153,0,0.07);
+      padding: 15px 18px;
+      box-shadow: 0 2px 8px rgba(255,215,0,0.06);
       transition: box-shadow 0.2s, background 0.2s;
       animation: timelineFadeIn 1.2s cubic-bezier(.59,.01,.69,.97);
     }
@@ -160,31 +160,31 @@
       content: '';
       position: absolute;
       left: -28px;
-      top: 26px;
-      width: 18px;
-      height: 18px;
-      background: linear-gradient(135deg, #ffd700, #ff9900);
+      top: 20px;
+      width: 14px;
+      height: 14px;
+      background: linear-gradient(135deg, #ffd700, #ffe29a);
       border-radius: 50%;
-      border: 3px solid #fffbe5;
-      box-shadow: 0 2px 8px #ffd70033;
+      border: 2px solid #fffbe5;
+      box-shadow: 0 2px 8px #ffd70020;
     }
     @keyframes timelineFadeIn {
       from { opacity: 0; transform: translateY(40px);}
       to { opacity: 1; transform: translateY(0);}
     }
     .timeline-entry:hover {
-      box-shadow: 0 6px 32px #ffd70028, 0 0 0 2px #ff990044;
-      background: linear-gradient(90deg,#ffd700 70%, #fffbe8 100%);
+      box-shadow: 0 6px 32px #ffd70018, 0 0 0 2px #ffe29a44;
+      background: linear-gradient(90deg,#ffe29a 70%, #fffef8 100%);
       transition: box-shadow 0.2s, background 0.2s;
     }
     .timeline-entry strong {
-      color: #ff9900;
-      font-size: 1rem;
+      color: #d4af37;
+      font-size: 0.95rem;
       margin-right: 10px;
     }
     .timeline-entry em {
       color: #ad8300;
-      font-size: 0.97rem;
+      font-size: 0.93rem;
       display: block;
       margin-top: 6px;
       font-style: italic;
@@ -193,9 +193,9 @@
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 2px 12px #ffd70033;
+      box-shadow: 0 2px 12px #ffd70030;
       margin-bottom: 8px;
       background: #fff;
       animation: fadeIn 1.7s cubic-bezier(.52,.01,.48,1);
@@ -209,51 +209,51 @@
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-      margin-top: 38px;
+      gap: 18px;
+      margin-top: 30px;
       animation: fadeIn 1.7s cubic-bezier(.52,.01,.48,1);
     }
     .gallery img {
       width: 100%;
-      height: 220px;
+      height: 210px;
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(255,153,0,0.13);
+      border-radius: 10px;
+      box-shadow: 0 8px 32px rgba(255,215,0,0.11);
       transition: transform 0.2s, box-shadow 0.2s;
       background: #fff;
-      border: 2px solid #ffe6b3;
+      border: 2px solid #ffe29a;
     }
     .gallery img:hover {
-      transform: scale(1.09) rotate(-2deg);
-      box-shadow: 0 8px 40px #ffd70066,0 0 0 2.5px #ff9900;
+      transform: scale(1.06) rotate(-2deg);
+      box-shadow: 0 8px 40px #ffd70044,0 0 0 2.5px #d4af37;
       border: 2.5px solid #ffd700;
       z-index: 2;
     }
     .hindi {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.13rem;
+      font-size: 1.09rem;
       margin-top: 8px;
-      background: linear-gradient(90deg,#ffd70080,#fffbe8 90%);
-      padding: 8px 14px;
+      background: linear-gradient(90deg,#ffd70040,#fffef8 90%);
+      padding: 7px 12px;
       border-radius: 6px;
       font-weight: 500;
       color: #ad8300;
       letter-spacing: 0.2px;
-      border-left: 5px solid #ffd700;
-      box-shadow: 0 2px 8px #ffd70022;
+      border-left: 4px solid #ffd700;
+      box-shadow: 0 2px 8px #ffd70010;
     }
     footer {
       text-align: center;
       font-size: 1rem;
       color: #ad8300;
-      padding: 30px;
-      margin-top: 62px;
-      border-top: 2px solid #ffd70044;
+      padding: 24px;
+      margin-top: 46px;
+      border-top: 2px solid #ffd70033;
       background: linear-gradient(90deg, #fffbe5 80%, #ffd700 100%);
       z-index: 1;
       position: relative;
       letter-spacing: 1px;
-      box-shadow: 0 2px 24px rgba(255,153,0,0.08);
+      box-shadow: 0 2px 24px rgba(255,215,0,0.06);
     }
     .footer-icons {
       margin-top: 10px;
@@ -263,13 +263,13 @@
     @media (max-width: 800px) {
       header h1 { font-size: 1.6rem;}
       .section { padding: 28px 8px; }
-      .gallery img {height: 140px;}
-      .timeline-entry { padding: 13px 8px; }
+      .gallery img {height: 120px;}
+      .timeline-entry { padding: 9px 8px; }
     }
     @media (max-width: 500px) {
-      .profile-img { width: 90px; height: 90px;}
-      .section h2 { font-size: 1rem;}
-      .gallery img {height: 82px;}
+      .profile-img { width: 80px; height: 80px;}
+      .section h2 { font-size: 0.95rem;}
+      .gallery img {height: 60px;}
     }
     @keyframes fadeIn {
       from { opacity: 0;}
@@ -339,10 +339,11 @@
   <section class="section">
     <h2><i class="fa fa-image"></i> Photo Gallery | ऐतिहासिक चित्र</h2>
     <div class="gallery">
-      <img src="image1" alt="Event Photo 1" />
-      <img src="image2" alt="Event Photo 2" />
-      <img src="image3" alt="Event Photo 3" />
-      <img src="image4" alt="Event Photo 4" />
+     
+      <img src="image5" alt="Group Gathering at Event" />
+      <img src="image6" alt="Honoring Ceremony" />
+      <img src="image7" alt="Celebration with Marigold Garland" />
+      <img src="image8" alt="Celebration with Flower Garlands" />
     </div>
   </section>
 
