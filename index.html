@@ -10,7 +10,7 @@
   <style>
     body {
       font-family: 'Merriweather', serif;
-      background: linear-gradient(135deg, #e9f7ef 0%, #f2f7f2 70%, #f6e5c2 100%);
+      background: linear-gradient(120deg, #f3e7e9 0%, #e3eeff 60%, #f7f7fd 100%);
       color: #222;
       margin: 0;
       padding: 0;
@@ -18,47 +18,49 @@
       position: relative;
       overflow-x: hidden;
     }
-    .animated-bg {
+    .circle-bg {
       position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
+      width: 100vw;
+      height: 100vh;
       z-index: 0;
+      left: 0;
+      top: 0;
       pointer-events: none;
-      background: transparent;
+      opacity: 0.4;
     }
     .circle {
       position: absolute;
       border-radius: 50%;
       filter: blur(50px);
-      opacity: 0.3;
-      animation: float 16s linear infinite;
+      opacity: 0.2;
+      animation: circleFloat 18s linear infinite alternate;
     }
-    .circle1 { background: #ff9933; width: 300px; height: 300px; top: 10%; left: 5%; animation-delay: 0s;}
-    .circle2 { background: #138808; width: 220px; height: 220px; top: 60%; left: 80%; animation-delay: 4s;}
-    .circle3 { background: #ffd700; width: 180px; height: 180px; top: 70%; left: 15%; animation-delay: 8s;}
-    @keyframes float {
+    .circle1 { background: #f6d365; width: 310px; height: 310px; top: 10%; left: 5%; animation-delay: 0s;}
+    .circle2 { background: #a1c4fd; width: 220px; height: 220px; top: 60%; left: 80%; animation-delay: 4s;}
+    .circle3 { background: #fad0c4; width: 180px; height: 180px; top: 70%; left: 15%; animation-delay: 8s;}
+    @keyframes circleFloat {
       0%,100% {transform: translateY(0);}
-      50% {transform: translateY(-30px);}
+      50% {transform: translateY(-38px);}
     }
     header {
-      background: linear-gradient(to right, #ff9933 0%, #ffffff 50%, #138808 100%);
-      color: #000;
-      padding: 90px 20px 40px 20px;
+      background: linear-gradient(95deg, #e3eeff 0%, #f3e7e9 80%);
+      color: #222;
+      padding: 82px 20px 38px 20px;
       text-align: center;
       animation: fadeIn 2s cubic-bezier(.52,.01,.48,1);
       border-radius: 0 0 50px 50px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+      box-shadow: 0 8px 32px rgba(30,30,70,0.08);
       position: relative;
       z-index: 1;
     }
     .profile-img {
-      width: 140px;
-      height: 140px;
+      width: 150px;
+      height: 150px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
       border: 4px solid #fff;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       animation: popIn 1.2s cubic-bezier(.54,.14,.54,.93);
       background: #fff;
     }
@@ -68,73 +70,76 @@
       100% {transform: scale(1); opacity:1;}
     }
     header h1 {
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       font-weight: 700;
       margin: 0;
-      letter-spacing: 2px;
-      text-shadow: 0 2px 16px #fff5;
-      background: linear-gradient(90deg, #ff9933, #138808, #ffd700);
+      letter-spacing: 1.5px;
+      text-shadow: 0 2px 12px #fff3;
+      background: linear-gradient(90deg, #fad0c4, #a1c4fd, #f6d365, #fffde4);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     header p {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-style: italic;
       margin-top: 8px;
       letter-spacing: 1px;
-      color: #222;
+      color: #5a6c7a;
     }
     .badge {
       display: inline-block;
-      background: #ffd700;
+      background: linear-gradient(90deg, #a1c4fd, #f6d365);
       color: #222;
       font-weight: bold;
-      padding: 6px 16px;
+      padding: 6px 18px;
       border-radius: 25px;
       font-size: 1rem;
       margin-top: 18px;
-      box-shadow: 0 2px 8px #ffd70070;
+      box-shadow: 0 2px 8px #fad0c455;
     }
     .section {
       position: relative;
       z-index: 1;
-      padding: 48px 20px;
+      padding: 52px 20px;
       max-width: 980px;
-      margin: 48px auto 0 auto;
-      background: rgba(255,255,255,0.88);
-      border-radius: 18px;
-      box-shadow: 0 3px 24px rgba(0,0,0,0.10);
+      margin: 56px auto 0 auto;
+      background: rgba(255,255,255,0.98);
+      border-radius: 20px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.07);
       animation: slideUp 1.3s cubic-bezier(.59,.01,.69,.97);
+      border: 1px solid #a1c4fd;
       overflow: hidden;
+      backdrop-filter: blur(2px);
     }
     .section h2 {
-      font-size: 2.2rem;
-      border-bottom: 2px solid #555;
+      font-size: 2.1rem;
+      border-bottom: 2px solid #fad0c4;
       padding-bottom: 10px;
       margin-bottom: 24px;
       letter-spacing: 1px;
       font-weight: 700;
-      color: #138808;
+      color: #5a6c7a;
       display: flex;
       align-items: center;
       gap: 14px;
+      text-shadow: 0 2px 8px #a1c4fd33;
     }
     .section h2 .fa {
-      color: #ff9933;
-      font-size: 1.5rem;
+      color: #f6d365;
+      font-size: 1.6rem;
     }
     .section h2 .fa-youtube {color: #e53935;}
-    .section h2 .fa-image {color: #138808;}
+    .section h2 .fa-image {color: #a1c4fd;}
     .timeline {
       position: relative;
-      padding-left: 28px;
+      padding-left: 30px;
     }
     .timeline:before {
       content: '';
       position: absolute;
       left: 10px; top: 0;
       width: 6px; height: 100%;
-      background: linear-gradient(to bottom, #ff9933 0%, #ffd700 100%);
+      background: linear-gradient(to bottom, #fad0c4 0%, #a1c4fd 100%);
       border-radius: 3px;
       opacity: 0.7;
     }
@@ -143,11 +148,11 @@
       margin-bottom: 32px;
       border-left: none;
       padding-left: 0;
-      background: #fff;
+      background: linear-gradient(90deg,#f7f7fd 70%,#e3eeff 100%);
       border-radius: 10px;
       padding: 18px 22px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      transition: box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(161,196,253,0.09);
+      transition: box-shadow 0.2s, background 0.2s;
       animation: timelineFadeIn 1.2s cubic-bezier(.59,.01,.69,.97);
     }
     .timeline-entry:before {
@@ -157,27 +162,27 @@
       top: 26px;
       width: 18px;
       height: 18px;
-      background: linear-gradient(135deg, #ff9933, #ffd700);
+      background: linear-gradient(135deg, #fad0c4, #a1c4fd);
       border-radius: 50%;
       border: 3px solid #fff;
-      box-shadow: 0 2px 8px #ffd70033;
+      box-shadow: 0 2px 8px #fad0c433;
     }
     @keyframes timelineFadeIn {
       from { opacity: 0; transform: translateY(40px);}
       to { opacity: 1; transform: translateY(0);}
     }
     .timeline-entry:hover {
-      box-shadow: 0 4px 16px rgba(255,153,51,0.18);
-      background: #fffbe6;
+      box-shadow: 0 6px 32px #fad0c428, 0 0 0 2px #a1c4fd44;
+      background: linear-gradient(90deg,#e3eeff 70%, #f7f7fd 100%);
       transition: box-shadow 0.2s, background 0.2s;
     }
     .timeline-entry strong {
-      color: #ff9933;
-      font-size: 1.1rem;
+      color: #a1c4fd;
+      font-size: 1.12rem;
       margin-right: 10px;
     }
     .timeline-entry em {
-      color: #555;
+      color: #5a6c7a;
       font-size: 1rem;
       display: block;
       margin-top: 6px;
@@ -189,7 +194,7 @@
       height: 0;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 2px 12px #e5393540;
+      box-shadow: 0 2px 12px #a1c4fd33;
       margin-bottom: 8px;
       background: #fff;
       animation: fadeIn 1.7s cubic-bezier(.52,.01,.48,1);
@@ -203,63 +208,65 @@
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 32px;
+      gap: 22px;
+      margin-top: 38px;
       animation: fadeIn 1.7s cubic-bezier(.52,.01,.48,1);
     }
     .gallery img {
       width: 100%;
-      height: 210px;
+      height: 220px;
       object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 18px rgba(19,136,8,0.12);
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(161,196,253,0.17);
       transition: transform 0.2s, box-shadow 0.2s;
       background: #fff;
     }
     .gallery img:hover {
-      transform: scale(1.06) rotate(-2deg);
-      box-shadow: 0 8px 32px rgba(19,136,8,0.18);
-      border: 2.5px solid #ffd700;
+      transform: scale(1.09) rotate(-2deg);
+      box-shadow: 0 8px 40px #fad0c466,0 0 0 2.5px #a1c4fd;
+      border: 2.5px solid #fad0c4;
       z-index: 2;
     }
     .hindi {
       font-family: 'Noto Sans Devanagari', sans-serif;
-      font-size: 1.09rem;
+      font-size: 1.13rem;
       margin-top: 8px;
-      background: linear-gradient(90deg,#ff993380,#fff0 90%);
-      padding: 7px 14px;
+      background: linear-gradient(90deg,#fad0c480,#e3eeff 90%);
+      padding: 8px 14px;
       border-radius: 6px;
       font-weight: 500;
-      color: #222;
+      color: #5a6c7a;
       letter-spacing: 0.2px;
+      border-left: 5px solid #fad0c4;
+      box-shadow: 0 2px 8px #fad0c422;
     }
     footer {
       text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      padding: 28px;
-      margin-top: 60px;
-      border-top: 2px solid #ffd70030;
-      background: linear-gradient(90deg, #f7f7f7 80%, #ffd70020 100%);
+      font-size: 1rem;
+      color: #5a6c7a;
+      padding: 30px;
+      margin-top: 62px;
+      border-top: 2px solid #a1c4fd44;
+      background: linear-gradient(90deg, #f3e7e9 80%, #e3eeff 100%);
       z-index: 1;
       position: relative;
       letter-spacing: 1px;
+      box-shadow: 0 2px 24px rgba(30,30,70,0.10);
     }
     .footer-icons {
       margin-top: 10px;
       font-size: 1.15rem;
     }
-    .footer-icons .fa {margin: 0 6px; color: #ff9933;}
-    /* Responsive */
+    .footer-icons .fa {margin: 0 6px; color: #fad0c4;}
     @media (max-width: 800px) {
-      header h1 { font-size: 2.3rem;}
+      header h1 { font-size: 2.1rem;}
       .section { padding: 28px 8px; }
       .gallery img {height: 140px;}
       .timeline-entry { padding: 13px 8px; }
     }
     @media (max-width: 500px) {
       .profile-img { width: 90px; height: 90px;}
-      .section h2 { font-size: 1.3rem;}
+      .section h2 { font-size: 1.1rem;}
       .gallery img {height: 82px;}
     }
     @keyframes fadeIn {
@@ -273,13 +280,13 @@
   </style>
 </head>
 <body>
-  <div class="animated-bg">
+  <div class="circle-bg">
     <div class="circle circle1"></div>
     <div class="circle circle2"></div>
     <div class="circle circle3"></div>
   </div>
   <header>
-    <img src="harbansh_photo.jpg" alt="Harbansh Singh Ji" class="profile-img" />
+    <img src="image1" alt="Shri Harbansh Singh Ji" class="profile-img" />
     <h1>Shri Harbansh Singh Ji</h1>
     <p>Born: 15 July 1947 &middot; Loktantra Rakshak Senani</p>
     <span class="badge"><i class="fa fa-award"></i> Democracy Defender</span>
@@ -330,10 +337,10 @@
   <section class="section">
     <h2><i class="fa fa-image"></i> Photo Gallery | ऐतिहासिक चित्र</h2>
     <div class="gallery">
-      <img src="harbansh_photo.jpg" alt="Harbansh Singh Photo" />
-      <img src="harbansh_photo.jpg" alt="Historic Moment" />
-      <img src="harbansh_photo.jpg" alt="Legacy" />
-      <!-- Add more images for a richer gallery -->
+      <img src="image1" alt="Harbansh Singh Ji Event" />
+      <img src="image2" alt="Community Gathering" />
+      <img src="image3" alt="Harbansh Singh Ji Event" />
+      <img src="image4" alt="Honoring Ceremony" />
     </div>
   </section>
 
