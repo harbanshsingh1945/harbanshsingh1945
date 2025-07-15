@@ -1,1 +1,0 @@
-This file must be renamed to `.nojekyll` after uploading to GitHub.
