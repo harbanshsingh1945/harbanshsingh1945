@@ -3,156 +3,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />                                                                             
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="wjPeGDYi_Hu94YIgylEd9CgH9pK57N3UUDp1_OFulXM" />
-  <title>Shri Harbansh Singh Ji Tribute</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <title>Shri Harbansh Singh Ji - Tribute</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans+Devanagari&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; scroll-behavior: smooth; }
     body {
-      font-family: 'Nunito', sans-serif;
-      background: #fcfcfc;
+      font-family: 'Merriweather', serif;
+      background: linear-gradient(to bottom, #fffef7, #f6f1e7);
+      color: #2c2c2c;
       margin: 0;
-      color: #2f2f2f;
-      line-height: 1.7;
+      padding: 0;
     }
     header {
-      background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      background: linear-gradient(to right, #f5c76c, #e8a03e);
+      color: white;
+      padding: 100px 20px;
       text-align: center;
-      padding: 60px 20px;
-      animation: fadeInDown 1.5s ease;
+      animation: fadeIn 2s ease-in-out;
     }
     header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
-      color: #fff;
+      font-size: 3rem;
       margin: 0;
     }
     header p {
       font-size: 1.2rem;
-      color: #fff;
       margin-top: 10px;
     }
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-      animation: fadeInUp 1s ease;
+    .section {
+      padding: 40px 20px;
+      max-width: 960px;
+      margin: auto;
+      animation: slideUp 1.5s ease-in-out;
     }
-    h2 {
-      font-family: 'Playfair Display', serif;
+    .section h2 {
       font-size: 2rem;
-      margin-bottom: 10px;
-      color: #34495e;
-      border-bottom: 2px solid #ffa500;
-      display: inline-block;
+      border-bottom: 2px solid #e8a03e;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
     }
-    .intro {
-      background: #fff9f0;
-      padding: 25px;
-      border-left: 6px solid #f39c12;
-      border-radius: 6px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    .timeline-entry {
+      margin-bottom: 25px;
+      border-left: 4px solid #d3a625;
+      padding-left: 15px;
+      transition: all 0.3s ease-in-out;
     }
-    .timeline ul { list-style: none; padding: 0; }
-    .timeline li {
-      background: #ffffff;
-      border-left: 5px solid #2980b9;
-      padding: 15px 20px;
-      margin: 15px 0;
-      border-radius: 6px;
-      position: relative;
-      animation: slideIn 0.7s ease forwards;
-      opacity: 0;
-    }
-    .timeline li:nth-child(even) { border-left-color: #27ae60; }
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .photo-grid img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .photo-grid img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-    }
-    iframe {
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    .timeline-entry:hover {
+      transform: translateX(5px);
     }
     footer {
-      background: #2c3e50;
-      color: white;
+      background: #f0f0f0;
       text-align: center;
-      padding: 20px;
-      font-size: 0.95rem;
+      padding: 25px;
+      font-size: 0.9em;
+      color: #555;
+      border-top: 1px solid #ddd;
     }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
-    @keyframes slideIn { to { opacity: 1; transform: translateX(0); } }
+    .hindi {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 1.05rem;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Shri Harbansh Singh Ji</h1>
-    <p>A Tribute to a Loktantra Rakshak Senani</p>
-  </header>
-  <main>
-    <section class="intro">
-      <h2>परिचय • Introduction</h2>
-      <p>श्री हरबंश सिंह जी का जन्म <strong>15 जुलाई 1945</strong> को हुआ था। वह लोकतंत्र की रक्षा के लिए किए गए संघर्षों में एक अग्रणी सेनानी थे।</p>
-      <p>Shri Harbansh Singh Ji was born on <strong>15 July 1945</strong>. He was a fearless activist and Loktantra Rakshak Senani who fought bravely during the Emergency and numerous people’s movements across India.</p>
-    </section>
-    <section class="timeline">
-      <h2>Life Journey • जीवन यात्रा</h2>
-      <ul><li><strong>🇮🇳 हिंदी:</strong> भारत बंद आंदोलन में नाबालिग अवस्था में भाग लिया और 1 महीने की जेल हुई।<br><strong>🌐 English:</strong> Participated in Bharat Bandh as a minor and was jailed for 1 month.</li>
-<li><strong>🇮🇳 हिंदी:</strong> 1974 में रेलवे मंत्री जगजीवन राम का हेलीकॉप्टर रोककर विरोध किया — फिर जेल हुई।<br><strong>🌐 English:</strong> In 1974, protested against Railway Minister Jagjivan Ram by stopping his helicopter — was jailed again.</li>
-<li><strong>🇮🇳 हिंदी:</strong> 1974 की ऑल इंडिया रेलवे स्ट्राइक में भाग लिया — 1 महीने की एकांत बैरक में बंद किया गया।<br><strong>🌐 English:</strong> Led workers in the 1974 All India Railway Strike — solitary confinement for 1 month.</li>
-<li><strong>🇮🇳 हिंदी:</strong> 1975 की इमरजेंसी के दौरान 18 महीने की कैद। यातना और एकांतवास का सामना किया।<br><strong>🌐 English:</strong> Imprisoned for 18 months during the 1975 Emergency. Faced extreme torture and solitary confinement.</li>
-<li><strong>🇮🇳 हिंदी:</strong> रेलवे गैंगमैन अधिकारों के लिए संघर्ष — रेलवे एक्ट 128 के तहत 3 महीने की जेल।<br><strong>🌐 English:</strong> Fought for railway gangmen rights — imprisoned for 3 months under Section 128 Railway Act.</li>
-<li><strong>🇮🇳 हिंदी:</strong> रामनगर पीपा पुल टैक्स के विरोध में आंदोलन — विधायक यदुनाथ सिंह के साथ 11 महीने जेल।<br><strong>🌐 English:</strong> Led movement to remove toll on Ramnagar Pipa Bridge — jailed 11 months with MLA Yadunath Singh.</li>
-<li><strong>🇮🇳 हिंदी:</strong> रामनगर शंकर हत्या मामले में न्याय की मांग पर जेल गए।<br><strong>🌐 English:</strong> Demanded justice in Ramnagar Shankar murder case — jailed in protest.</li>
-<li><strong>🇮🇳 हिंदी:</strong> पुलिस परिषद आंदोलन में गिरफ्तार — एक सिपाही ने भी गिरफ्तारी दी।<br><strong>🌐 English:</strong> Arrested during Police Council movement. A police constable also submitted himself for arrest.</li>
-<li><strong>🇮🇳 हिंदी:</strong> जनता पार्टी की सरकार होते हुए भी पड़ाव कांड में लाठीचार्ज व गिरफ्तारी हुई।<br><strong>🌐 English:</strong> Lathi-charged and jailed during Padav protest even under Janata Party rule.</li>
-<li><strong>🇮🇳 हिंदी:</strong> चंधासी कोयला मंडी टैक्स विरोध में बंदी — हफ्तों बाज़ार बंद और गिरफ्तारी।<br><strong>🌐 English:</strong> Chandasi protest against coal tax — arrested after shutting down market for weeks.</li>
-<li><strong>🇮🇳 हिंदी:</strong> 1985 में नगरपालिका इंटर कॉलेज छात्रों के विरोध में 4 दिन की जेल।<br><strong>🌐 English:</strong> 1985: Protested for students at Nagar Palika Inter College — jailed 4 days.</li>
-<li><strong>🇮🇳 हिंदी:</strong> रामनगर बसंत पेपर मिल में युवाओं के विरोध में पूर्व विधायक के साथ गिरफ्तार।<br><strong>🌐 English:</strong> Protested at Ramnagar Basant Paper Mill — arrested with former MLA.</li>
-<li><strong>🇮🇳 हिंदी:</strong> इंदिरा गांधी को काला झंडा दिखाने के बाद गिरफ्तार।<br><strong>🌐 English:</strong> Arrested at Padav after showing black flag to Indira Gandhi.</li>
-<li><strong>🇮🇳 हिंदी:</strong> विदेश से गेहूं आयात के विरोध में मुंबई बंदरगाह पर गिरफ्तारी।<br><strong>🌐 English:</strong> Opposed foreign wheat imports at Mumbai port — arrested with Ram Vilas Paswan.</li>
-<li><strong>🇮🇳 हिंदी:</strong> मिर्जापुर आंदोलन में लाठीचार्ज व गिरफ्तारी।<br><strong>🌐 English:</strong> Brutally lathi-charged and arrested in Mirzapur protest with MLA Yadunath Singh.</li>
-<li><strong>🇮🇳 हिंदी:</strong> मुगलसराय फायर ब्रिगेड कांड में जेल व जान से मारने का आदेश।<br><strong>🌐 English:</strong> Charged in Mughalsarai fire brigade case — police ordered arrest dead or alive.</li>
-<li><strong>🇮🇳 हिंदी:</strong> शारीरिक यातनाएं — हाथ-पैर में किल ठोके गए, नाखून उखाड़े गए।<br><strong>🌐 English:</strong> Subjected to physical torture — nails removed, rods pierced in limbs.</li>
-<li><strong>🇮🇳 हिंदी:</strong> चंधासी में 700% टैक्स के खिलाफ 22 दिन की मंडी बंद कर आंदोलन।<br><strong>🌐 English:</strong> Opposed 700% tax increase in Chandasi coal market — led a 22-day protest.</li>
-<li><strong>🇮🇳 हिंदी:</strong> 2011 में वन विभाग टैक्स विरोध में 14 दिन जेल।<br><strong>🌐 English:</strong> 2011: Opposed forest department tax — jailed 14 days.</li>
-<li><strong>🇮🇳 हिंदी:</strong> कुल 23 बार महीनों तक जेल और सैंकड़ों बार छोटी जेल यात्राएं।<br><strong>🌐 English:</strong> Jailed 23 times for long periods; hundreds of shorter arrests.</li>
-<li><strong>🇮🇳 हिंदी:</strong> नेता यदुनाथ सिंह, सतनाम सिंह, व अन्य के साथ लोकतांत्रिक लड़ाई लड़ी।<br><strong>🌐 English:</strong> Fought alongside leaders like Yadunath Singh, Satnam Singh and others.</li></ul>
-    </section>
-    <section class="gallery">
-      <h2>Photo Gallery</h2>
-      <div class="photo-grid">
-        <img src="photos/1000000345.webp" alt="Photo 1" />
-        <img src="photos/1000000346.webp" alt="Photo 2" />
-      </div>
-    </section>
-    <section class="video">
-      <h2>Watch His Story</h2>
-      <div style="text-align:center">
-        <iframe width="90%" height="315" src="https://www.youtube.com/embed/mkNtbTVDTFA" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
-  </main>
-  <footer>&copy; 2025 Tribute to Shri Harbansh Singh Ji | Designed with respect and love</footer>
+<header>
+  <h1>Shri Harbansh Singh Ji</h1>
+  <p>Born: 15 July 1947 · Loktantra Rakshak Senani · Voice of Democracy</p>
+</header>
+<section class="section">
+  <h2>Introduction परिचय</h2>
+  <p><strong>Shri Harbansh Singh Ji</strong> dedicated his life to public service, resistance against injustice, and the protection of democracy. His bravery during the Emergency period and major national movements earned him the respect of thousands.</p>
+  <p class="hindi"><strong>श्री हरबंश सिंह जी</strong> ने अपना जीवन जन सेवा, अन्याय के विरुद्ध संघर्ष और लोकतंत्र की रक्षा के लिए समर्पित किया। आपातकाल व कई राष्ट्रीय आंदोलनों में उनकी भागीदारी अद्वितीय रही।</p>
+</section>
+<section class="section">
+  <h2>Life Journey | जीवन यात्रा</h2>
+  <div class="timeline-entry"><p><strong>Emergency 1975-77:</strong> 18 months imprisonment in solitary confinement under brutal conditions.</p><p class="hindi">आपातकाल में 18 महीने तक तन्हाई बैरक में कठोर यातनाएं सहनी पड़ीं।</p></div>
+  <div class="timeline-entry"><p><strong>1974 Protest:</strong> Opposed Shri Jagjivan Ram's landing — jailed after protest against corruption.</p><p class="hindi">1974 में जगजीवन बाबू के हेलीकॉप्टर उतरवाने का विरोध कर जेल जाना पड़ा।</p></div>
+  <div class="timeline-entry"><p><strong>Railway Strike:</strong> Arrested during George Fernandes’ call — kept in isolation.</p><p class="hindi">ऑल इंडिया रेलवे स्ट्राइक में गिरफ्तार होकर तन्हाई बैरक में रहना पड़ा।</p></div>
+  <div class="timeline-entry"><p><strong>Indira Gandhi Protest:</strong> Waved black flag — arrested and jailed at Ramnagar.</p><p class="hindi">इंदिरा गांधी को काला झंडा दिखाने पर रामनगर जेल में डाला गया।</p></div>
+  <div class="timeline-entry"><p><strong>Chandasi Mandi Movement:</strong> Led 22-day shutdown against 700% tax hike in 2011.</p><p class="hindi">2011 में चन्धासी मंडी को 22 दिनों तक बंद कराकर टैक्स का विरोध किया।</p></div>
+  <div class="timeline-entry"><p><strong>Total Imprisonments:</strong> 23 long-term + 100s of short-term arrests over decades.</p><p class="hindi">23 बार लंबी जेल और सैकड़ों बार छोटे आंदोलनों में गिरफ्तार हुए।</p></div>
+</section>
+<footer>
+  Designed in honor of Shri Harbansh Singh Ji | Tribute by Family & Well-Wishers
+</footer>
 </body>
 </html>
